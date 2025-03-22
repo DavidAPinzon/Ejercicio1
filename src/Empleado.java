@@ -1,9 +1,25 @@
 public class Empleado {
-    protected String nombre;
-    protected int edad;
+    private String nombre;
+    private int edad;
 
     public Empleado(String nombre, int edad) {
         this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
@@ -12,6 +28,6 @@ public class Empleado {
     }
 
     public String obtenerInformacion() {
-        return "Nombre: " + nombre + " Edad: " + edad + " Salario: $" + calcularSalario();
+        return "Nombre: " + getNombre() + ", Edad: " + getEdad() + ", Salario: " + calcularSalario();
     }
 }

@@ -1,13 +1,21 @@
-public class EmpleadoPlanta extends Empleado {
-    private double salario;
+class EmpleadoPlanta extends Empleado {
+    private double salarioFijo;
 
-    public EmpleadoPlanta (String nombre, int edad, double salarioFijo) {
+    public EmpleadoPlanta(String nombre, int edad, double salarioFijo) {
         super(nombre, edad);
-        this.salario = salarioFijo;
+        this.salarioFijo = salarioFijo;
+    }
+
+    public double getSalarioFijo() {
+        return salarioFijo;
+    }
+
+    public void setSalarioFijo(double salarioFijo) {
+        this.salarioFijo = salarioFijo;
     }
 
     @Override
     public double calcularSalario() {
-        return salario;
+        return getSalarioFijo();
     }
 }

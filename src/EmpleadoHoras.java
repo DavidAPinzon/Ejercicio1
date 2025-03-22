@@ -1,15 +1,31 @@
-public class EmpleadoHoras extends Empleado {
-    private double pagohora;
-    private double horas;
+class EmpleadoHoras extends Empleado {
+    private double pagoHora;
+    private double horasTrabajadas;
 
-    public EmpleadoHoras (String nombre,int edad, double pagohora, double horas) {
+    public EmpleadoHoras(String nombre, int edad, double pagoHora, double horasTrabajadas) {
         super(nombre, edad);
-        this.pagohora = pagohora;
-        this.horas = horas;
+        this.pagoHora = pagoHora;
+        this.horasTrabajadas = horasTrabajadas;
+    }
+
+    public double getPagoHora() {
+        return pagoHora;
+    }
+
+    public void setPagoHora(double pagoHora) {
+        this.pagoHora = pagoHora;
+    }
+
+    public double getHorasTrabajadas() {
+        return horasTrabajadas;
+    }
+
+    public void setHorasTrabajadas(double horasTrabajadas) {
+        this.horasTrabajadas = horasTrabajadas;
     }
 
     @Override
     public double calcularSalario() {
-        return pagohora * horas;
+        return getPagoHora() * getHorasTrabajadas();
     }
 }
